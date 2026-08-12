@@ -1,0 +1,56 @@
+@import '../../../shared/_variables';
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #262618;
+  padding: 8px 120px;
+  overflow: hidden;
+  max-height: 120px;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.35s ease;
+
+  &.closed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+  }
+
+  .title {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.7%;
+    color: $color-white;
+    width: 100%;
+    text-align: center;
+
+    .link {
+      color: $secondary-blue-300;
+    }
+  }
+
+  .closeButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    align-self: end;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

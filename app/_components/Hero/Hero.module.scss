@@ -1,0 +1,86 @@
+@import '../../../shared/_variables';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 52px;
+  width: 100%;
+  height: 756px;
+  gap: 10px;
+  background-image: url('/Hero/hero_girl.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.frameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 630px;
+  padding: 0 56px;
+
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 442px;
+
+    .title {
+      font-family: var(--font-museomoderno);
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 63.36px;
+      letter-spacing: -3.2px;
+      color: $color-white;
+
+      b {
+        font-weight: 600;
+      }
+    }
+
+    .description {
+      font-family: var(--font-inter);
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: -1px;
+      line-height: 20px;
+      color: $color-white;
+    }
+
+    .button {
+      margin-top: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.8px;
+      color: $color-white;
+      width: 159;
+      height: 48;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background-color: $secondary-blue-500;
+      align-self: start;
+    }
+
+    .stars {
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.8px;
+      color: $secondary-blue-100;
+    }
+  }
+}
