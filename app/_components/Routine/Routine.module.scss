@@ -1,0 +1,150 @@
+@import '../../../shared/_variables';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 52px 52px 80px;
+  background-color: #ebe5e0;
+  gap: 80px;
+  border-radius: 0 0 80px 80px;
+  border: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+
+  .title {
+    font-family: var(--font-museomoderno);
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.4px;
+    color: $primary-800;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-family: var(--font-inter);
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1.2px;
+    color: $primary-800;
+    margin: 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+
+  .filters {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 12.93px 17.24px 17.24px;
+    border-radius: 6.46px;
+    gap: 8px;
+
+    .badges {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .heart {
+        border-radius: 50%;
+        background-color: #a9a352;
+        padding: 7.66px;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .discount {
+        border-radius: 107.73px;
+        background-color: #a9a352;
+        padding: 8.62px;
+
+        font-family: var(--font-museomoderno);
+        font-weight: 400;
+        font-size: 14.01px;
+        line-height: 14.01px;
+        letter-spacing: -0.7005px;
+        text-align: center;
+        color: #262618;
+      }
+    }
+
+    .imageContainer {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      gap: 8px;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        max-width: 223px;
+        object-fit: cover;
+      }
+
+      .productName {
+        font-family: var(--font-museomoderno);
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -1.2px;
+        color: #44442a;
+        text-align: center;
+      }
+
+      .price {
+        font-family: var(--font-inter);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: #44442a;
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import Menu from '../Menu/Menu'
 import styles from './Hero.module.scss'
 import HeroGirl from '@/public/Hero/HeroGirl.webp'
+import Button from '@/shared/components/button/button'
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
             No filters, no fine print — just dermatologist-tested formulas with
             the ingredient list to back it up.
           </p>
-          <button className={styles.button}>Shop now</button>
+          <Button className='mt-[38px]'>Shop now</Button>
           <p className={styles.stars}>★★★★★  4.8 from 1,204 reviews</p>
         </div>
       </div>

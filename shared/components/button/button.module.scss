@@ -1,0 +1,89 @@
+@import '../../_variables';
+
+.default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.8px;
+  color: $color-white;
+  width: 159px;
+  height: 48px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background-color: $secondary-blue-500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-blue-800;
+  }
+
+  &:focus {
+    border: 3px solid $secondary-blue-200;
+  }
+
+  &:active {
+    background-color: $secondary-blue-900;
+  }
+
+  &:disabled {
+    background-color: #e5e7ea;
+    color: #9ea2ae;
+  }
+}
+
+.secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.8px;
+  width: 159px;
+  height: 48px;
+  padding: 14px 20px;
+  border-radius: 12px;
+
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: 1px solid $primary-800;
+  color: $primary-800;
+  font-weight: 400;
+
+  &:hover {
+    background-color: #44442a;
+    color: $color-white;
+    font-weight: 500;
+  }
+
+  &:focus {
+    background-color: #44442a;
+    color: $color-white;
+    font-weight: 500;
+  }
+
+  &:active {
+    background-color: #44442a;
+    color: $color-white;
+    font-weight: 500;
+  }
+
+  &:disabled {
+    background-color: #e5e7ea;
+    color: #9ea2ae;
+  }
+
+  &.active {
+    background-color: #44442a;
+    color: $color-white;
+    font-weight: 500;
+  }
+}

@@ -55,25 +55,6 @@
       color: $color-white;
     }
 
-    .button {
-      margin-top: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-inter);
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 16px;
-      letter-spacing: -0.8px;
-      color: $color-white;
-      width: 159;
-      height: 48;
-      padding: 14px 20px;
-      border-radius: 12px;
-      background-color: $secondary-blue-500;
-      align-self: start;
-    }
-
     .stars {
       font-family: var(--font-inter);
       font-weight: 400;

@@ -1,0 +1,62 @@
+@import '../../../shared/_variables';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 52px;
+  gap: 10px;
+  background-color: #ebe5e0;
+  border: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 48px;
+  border-radius: 6px;
+  background-color: $color-white;
+  text-align: center;
+  width: 100%;
+  max-width: 273px;
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .title {
+    font-family: var(--font-museomoderno);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1.2px;
+    color: #1b2515;
+    margin: 0;
+  }
+
+  .description {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -0.65px;
+    color: #1b2515;
+    margin: 0;
+    text-align: center;
+  }
+}
