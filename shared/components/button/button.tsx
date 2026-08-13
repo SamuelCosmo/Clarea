@@ -4,7 +4,7 @@ interface ButtonProps {
   children: React.ReactNode
   onClick?: () => void
   className?: string
-  style?: 'default' | 'secondary'
+  style?: 'default' | 'secondary' | 'blue-outline'
   active?: boolean
 }
 
@@ -15,7 +15,13 @@ export default function Button({
   style = 'default',
   active = false,
 }: ButtonProps) {
-  const styleClass = style === 'default' ? styles.default : styles.secondary
+  const styleMap = {
+    default: styles.default,
+    secondary: styles.secondary,
+    'blue-outline': styles['blue-outline'],
+  }
+
+  const styleClass = styleMap[style]
   const activeClass = active && style === 'secondary' ? styles.active : ''
 
   return (

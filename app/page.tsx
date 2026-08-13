@@ -4,6 +4,7 @@ import Hero from './_components/Hero/Hero'
 import Banner from './_components/Banner/Banner'
 import Features from './_components/Features/Features'
 import Routine from './_components/Routine/Routine'
+import Shop from './_components/Shop/Shop'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Routine />
+      <Shop />
     </main>
   )
 }
