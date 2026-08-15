@@ -4,14 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-self: center;
   flex-direction: row;
   max-width: 1240;
   width: 100%;
   border-radius: 20px;
   padding: 36px 64px;
   gap: 153px;
-  top: 3211px;
-  left: 101px;
   background-color: $primary-800;
   position: absolute;
   top: -90px;
