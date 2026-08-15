@@ -1,7 +1,7 @@
 @import '../../../../shared/_variables';
 
 .main {
-    max-width: 400px;
+  //max-width: 400px;
   width: 100%;
   min-height: 240px;
   border-radius: 20px;
@@ -10,6 +10,8 @@
   padding-bottom: 28px;
   padding-left: 32px;
   background: $neutral-200;
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 
   .stars {

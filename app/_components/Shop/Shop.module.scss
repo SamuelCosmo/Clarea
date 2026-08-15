@@ -1,14 +1,10 @@
 @import '../../../shared/_variables';
 
 .main {
-  background:
-    linear-gradient(0deg, #413f1f, #413f1f),
-    linear-gradient(180deg, #413f1f 63.81%, #868141 89.14%);
-  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 160px 52px 52px;
+  padding: 52px 52px;
   width: 100%;
 
   .body {

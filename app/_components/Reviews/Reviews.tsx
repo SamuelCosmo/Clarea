@@ -7,7 +7,7 @@ import type SwiperCore from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import './CustomSwiper.scss'
+//import './CustomSwiper.scss'
 import Card from './_components/Card'
 import { useEffect, useRef } from 'react'
 import arrowLeft from '@/public/Reviews/arrow-left.svg'
@@ -41,10 +41,8 @@ export default function Reviews() {
       <div className={styles.body}>
         <Swiper
           spaceBetween={20}
-          slidesPerView={'auto'}
-          centeredSlides
+          slidesPerView={3}
           loop={true}
-          loopAdditionalSlides={3}
           observer={true}
           observeParents={true}
           observeSlideChildren={true}

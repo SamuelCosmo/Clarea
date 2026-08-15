@@ -1,0 +1,113 @@
+@import '../../../shared/_variables';
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background: #ebe5e0;
+  padding: 120px 100px 64px;
+  width: 100%;
+  gap: 10px;
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0000001a;
+
+    .social-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      max-width: 248px;
+      width: 100%;
+      gap: 25px;
+
+      .logo {
+        max-width: 152.8px;
+      }
+
+      .description {
+        font-family: var(--font-inter);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0px;
+        color: #00000099;
+      }
+
+      .container {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+
+        .social {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 26px;
+
+      .title {
+        font-family: var(--font-inter);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #262618;
+      }
+
+      .options {
+        font-family: var(--font-inter);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0px;
+        color: #00000099;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .rights {
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #00000099;
+    }
+
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      img {
+        width: 47px;
+        height: 30px;
+      }
+    }
+  }
+}
