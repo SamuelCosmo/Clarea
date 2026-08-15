@@ -1,5 +1,5 @@
-@import '@/shared/variables';
-@import '@/shared/_media-queries';
+@use '@/shared/_variables' as *;
+@use '@/shared/_media-queries' as *;
 
 .main {
   display: flex;
@@ -10,18 +10,28 @@
   padding: 8px 36px;
   border-radius: 24px;
   background: #ffffffb2;
+  position: relative;
 
   @include mobile {
     background: $color-white;
     border-radius: 0;
     position: absolute;
+    justify-content: center;
     left: 0;
-    top: -59px;
+    top: -40px;
+    padding: 8px 24px;
   }
 
   .logo {
     width: 112px;
     height: auto;
+
+    @include mobile {
+      width: 33px;
+      height: 27px;
+      position: absolute;
+      align-self: center;
+    }
   }
 
   .menuItems {
@@ -56,5 +66,27 @@
       width: 24px;
       height: 24px;
     }
+
+    @include mobile {
+      gap: 12px;
+      margin-left: auto;
+    }
+  }
+}
+
+.menu {
+  width: 24px;
+  height: 24px;
+}
+
+.hide-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @include desktop {
+    display: none;
   }
 }

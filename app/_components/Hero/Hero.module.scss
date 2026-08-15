@@ -1,5 +1,5 @@
-@import '@/shared/_variables';
-@import '@/shared/_media-queries';
+@use '@/shared/_variables' as *;
+@use '@/shared/_media-queries' as *;
 
 .main {
   display: flex;
@@ -16,7 +16,7 @@
   position: relative;
 
   @include mobile {
-    margin-top: 59px;
+    margin-top: 40px;
     background-image: url('/Hero/hero_girl_mobile.webp');
     padding: 36px 52px;
     height: 756px;

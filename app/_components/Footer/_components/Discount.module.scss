@@ -1,5 +1,5 @@
-@import '@/shared/_variables';
-@import '@/shared/_media-queries';
+@use '@/shared/_variables' as *;
+@use '@/shared/_media-queries' as *;
 
 .main {
   display: flex;
