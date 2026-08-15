@@ -1,0 +1,52 @@
+@import '../../../../shared/_variables';
+
+.main {
+    max-width: 400px;
+  width: 100%;
+  min-height: 240px;
+  border-radius: 20px;
+  padding-top: 28px;
+  padding-right: 32px;
+  padding-bottom: 28px;
+  padding-left: 32px;
+  background: $neutral-200;
+  gap: 15px;
+
+  .stars {
+    display: flex;
+    gap: 6.49px;
+
+    img {
+      width: 22.58px;
+      height: 22.58px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+
+    .title {
+      font-family: var(--font-inter);
+      font-weight: 700;
+      font-style: 700;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: $primary-900;
+    }
+
+    .description {
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-style: 400;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: #00000099;
+    }
+  }
+}

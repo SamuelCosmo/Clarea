@@ -1,0 +1,54 @@
+@import '../../../shared/_variables';
+
+.main {
+  background:
+    linear-gradient(0deg, #413f1f, #413f1f),
+    linear-gradient(180deg, #413f1f 63.81%, #868141 89.14%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 52px 0;
+  gap: 40px;
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 52px;
+    width: 100%;
+
+    .title {
+      font-family: var(--font-museomoderno);
+      font-weight: 700;
+      font-style: 700;
+      font-size: 36px;
+      line-height: 36px;
+      letter-spacing: 0;
+      vertical-align: middle;
+      color: $color-white;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+}
