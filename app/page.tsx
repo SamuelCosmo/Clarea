@@ -26,8 +26,8 @@ export default function Home() {
       <Routine />
       <div className={styles.container}>
         <Shop />
-        {/* <Reviews />
-        <Footer /> */}
+        <Reviews />
+        <Footer />
       </div>
     </main>
   )

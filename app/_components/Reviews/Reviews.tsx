@@ -41,7 +41,7 @@ export default function Reviews() {
       <div className={styles.body}>
         <Swiper
           spaceBetween={20}
-          slidesPerView={3}
+          slidesPerView={1}
           loop={true}
           observer={true}
           observeParents={true}
@@ -49,6 +49,20 @@ export default function Reviews() {
           pagination={false}
           navigation={false}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
+          freeMode={{
+            enabled: true,
+            sticky: true,
+            momentum: true,
+          }}
+          breakpoints={{
+            520: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 3,
+              freeMode: { enabled: false },
+            },
+          }}
         >
           <SwiperSlide>
             <Card
