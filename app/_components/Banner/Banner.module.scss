@@ -1,4 +1,5 @@
-@import '../../../shared/_variables';
+@import '@/shared/_variables';
+@import '@/shared/_media-queries.scss';
 
 .main {
   display: flex;
@@ -17,6 +18,11 @@
     padding 0.35s ease,
     opacity 0.25s ease,
     transform 0.35s ease;
+
+  @include mobile {
+    padding: 2px 16px;
+    height: 55px;
+  }
 
   &.closed {
     max-height: 0;
@@ -51,6 +57,10 @@
     img {
       width: 20px;
       height: 20px;
+    }
+
+    @include mobile {
+      align-self: center;
     }
   }
 }

@@ -1,4 +1,5 @@
-@import '../../../shared/variables';
+@import '@/shared/variables';
+@import '@/shared/_media-queries';
 
 .main {
   display: flex;
@@ -9,6 +10,14 @@
   padding: 8px 36px;
   border-radius: 24px;
   background: #ffffffb2;
+
+  @include mobile {
+    background: $color-white;
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    top: -59px;
+  }
 
   .logo {
     width: 112px;
@@ -28,6 +37,10 @@
       line-height: 16px;
       letter-spacing: 0px;
       color: $primary-800;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 

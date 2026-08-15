@@ -1,4 +1,5 @@
-@import '../../../shared/_variables';
+@import '@/shared/_variables';
+@import '@/shared/_media-queries';
 
 .main {
   display: flex;
@@ -12,6 +13,15 @@
   background-image: url('/Hero/hero_girl.webp');
   background-size: cover;
   background-position: center;
+  position: relative;
+
+  @include mobile {
+    margin-top: 59px;
+    background-image: url('/Hero/hero_girl_mobile.webp');
+    padding: 36px 52px;
+    height: 756px;
+    justify-content: flex-start;
+  }
 }
 
 .frameContainer {
@@ -23,6 +33,11 @@
   width: 100%;
   height: 630px;
   padding: 0 56px;
+
+  @include mobile {
+    padding: 0;
+    height: initial;
+  }
 
   .titleContainer {
     display: flex;
@@ -36,9 +51,9 @@
     .title {
       font-family: var(--font-museomoderno);
       font-weight: 400;
-      font-size: 64px;
-      line-height: 63.36px;
-      letter-spacing: -3.2px;
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -2.4px;
       color: $color-white;
 
       b {
