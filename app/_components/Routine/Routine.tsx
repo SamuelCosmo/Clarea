@@ -95,6 +95,7 @@ export default function Routine() {
               onClick={() => setActiveCategory(category)}
               style='secondary'
               active={category === activeCategory}
+              className={styles.categoryButton}
             >
               {category}
             </Button>
@@ -130,7 +131,7 @@ export default function Routine() {
         </div>
 
         <div className={styles.buttonContainer}>
-          <Button>Shop {activeCategory}</Button>
+          <Button className={styles.buttonCategory}>Shop {activeCategory}</Button>
         </div>
       </div>
     </section>

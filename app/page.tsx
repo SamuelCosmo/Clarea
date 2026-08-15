@@ -15,15 +15,19 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={'flex flex-1 w-full flex-col items-center sm:items-start'}>
+    <main
+      className={
+        'flex flex-1 w-full flex-col items-center sm:items-start overflow-x-hidden'
+      }
+    >
       <Banner />
       <Hero />
       <Features />
       <Routine />
       <div className={styles.container}>
         <Shop />
-        <Reviews />
-        <Footer />
+        {/* <Reviews />
+        <Footer /> */}
       </div>
     </main>
   )
