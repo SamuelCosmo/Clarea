@@ -65,6 +65,10 @@
     align-items: center;
     width: 100%;
     overflow: hidden;
-    padding: 0 20px;
+
+    // Centers the shorter side cards next to the taller active one.
+    :global(.swiper-wrapper) {
+      align-items: center;
+    }
   }
 }

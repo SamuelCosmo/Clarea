@@ -7,12 +7,34 @@ import type SwiperCore from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-//import './CustomSwiper.scss'
 import Card from './_components/Card'
 import { useEffect, useRef } from 'react'
 import arrowLeft from '@/public/Reviews/arrow-left.svg'
 import arrowRight from '@/public/Reviews/arrow-right.svg'
 import Image from 'next/image'
+
+const testimonials = [
+  {
+    title: 'Sarah M.',
+    description:
+      '"I\'m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I\'ve bought has exceeded my expectations."',
+  },
+  {
+    title: 'Alex K.',
+    description:
+      '"Finally a routine that doesn\'t irritate my skin. The cleanser is so gentle."',
+  },
+  {
+    title: 'James L.',
+    description:
+      '"Ingredient list actually makes sense to me. That sold me before the results did."',
+  },
+]
+
+// Repeated so enough real slides exist to satisfy Swiper's loop buffer
+// at the widest breakpoint (slidesPerView 3.3); fewer slides than that
+// makes loop mode pad the gap with blank slides.
+const slides = [...testimonials, ...testimonials, ...testimonials]
 
 export default function Reviews() {
   const swiperRef = useRef<SwiperCore | null>(null)
@@ -40,8 +62,9 @@ export default function Reviews() {
       </div>
       <div className={styles.body}>
         <Swiper
-          spaceBetween={20}
-          slidesPerView={1}
+          spaceBetween={16}
+          slidesPerView={1.15}
+          centeredSlides={true}
           loop={true}
           observer={true}
           observeParents={true}
@@ -49,69 +72,25 @@ export default function Reviews() {
           pagination={false}
           navigation={false}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          freeMode={{
-            enabled: true,
-            sticky: true,
-            momentum: true,
-          }}
           breakpoints={{
-            520: {
-              slidesPerView: 1,
+            521: {
+              slidesPerView: 2.2,
+              spaceBetween: 20,
             },
-            1024: {
-              slidesPerView: 3,
-              freeMode: { enabled: false },
+            1025: {
+              slidesPerView: 3.3,
+              spaceBetween: 24,
             },
           }}
         >
-          <SwiperSlide>
-            <Card
-              title={'Sarah M.'}
-              description={
-                '"I\'m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I\'ve bought has exceeded my expectations."'
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              title={'Alex K.'}
-              description={
-                '"Finally a routine that doesn\'t irritate my skin. The cleanser is so gentle."'
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              title={'James L.'}
-              description={
-                '\"Ingredient list actually makes sense to me. That sold me before the results did.\"'
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              title={'Sarah M.'}
-              description={
-                '"I\'m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I\'ve bought has exceeded my expectations."'
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              title={'Alex K.'}
-              description={
-                '"Finally a routine that doesn\'t irritate my skin. The cleanser is so gentle."'
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card
-              title={'James L.'}
-              description={
-                '\"Ingredient list actually makes sense to me. That sold me before the results did.\"'
-              }
-            />
-          </SwiperSlide>
+          {slides.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <Card
+                title={testimonial.title}
+                description={testimonial.description}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

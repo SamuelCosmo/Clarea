@@ -1,9 +1,9 @@
-@use '../../../../shared/_variables' as *;
+@use '@/shared/_variables' as *;
+@use '@/shared/_media-queries' as *;
 
 .main {
-  //max-width: 400px;
   width: 100%;
-  min-height: 240px;
+  height: 200px;
   border-radius: 20px;
   padding-top: 28px;
   padding-right: 32px;
@@ -13,6 +13,27 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transition: height 0.3s ease;
+  filter: blur(2px);
+
+  :global(.swiper-slide-active) & {
+    height: 240px;
+    filter: blur(0px);
+  }
+
+  :global(.swiper-slide-prev) & {
+    @include desktop {
+      height: 240px;
+      filter: blur(0px);
+    }
+  }
+
+  :global(.swiper-slide-next) & {
+    @include desktop {
+      height: 240px;
+      filter: blur(0px);
+    }
+  }
 
   .stars {
     display: flex;
