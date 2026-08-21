@@ -14,7 +14,13 @@ export default function Menu() {
       <Image
         src={logo}
         alt='Clarea Logo'
-        className={styles.logo + ' ' + styles['hide-mobile']}
+        className={
+          styles.logo +
+          ' ' +
+          styles['hide-mobile'] +
+          ' ' +
+          styles['hide-tablet']
+        }
       />
       <Image
         src={menu}

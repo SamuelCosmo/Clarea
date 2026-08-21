@@ -10,6 +10,10 @@
   gap: 40px;
   width: 100%;
 
+  @include tablet {
+    padding: 64px 0 320px;
+  }
+
   @include mobile {
     padding: 64px 0 320px;
   }

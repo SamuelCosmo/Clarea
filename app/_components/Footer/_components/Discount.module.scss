@@ -17,6 +17,17 @@
   top: -90px;
   z-index: 100;
 
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 48px;
+    gap: 32px;
+    width: calc(100% - 80px);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -170px;
+  }
+
   @include mobile {
     flex-direction: column;
     padding: 36px 24px;
@@ -32,6 +43,10 @@
     flex-direction: column;
     gap: 16px;
 
+    @include tablet {
+      align-items: center;
+    }
+
     .discount {
       font-family: var(--font-museomoderno);
       font-weight: 700;
@@ -39,6 +54,11 @@
       line-height: 45px;
       letter-spacing: 0;
       color: $color-white;
+
+      @include tablet {
+        font-size: 32px;
+        text-align: center;
+      }
 
       @include mobile {
         font-size: 32ox;
@@ -53,6 +73,13 @@
       font-size: 20px;
       line-height: 20px;
       letter-spacing: -1px;
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.8px;
+        text-align: center;
+      }
 
       @include mobile {
         font-size: 16px;

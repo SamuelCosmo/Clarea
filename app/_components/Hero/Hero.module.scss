@@ -15,6 +15,14 @@
   background-position: center;
   position: relative;
 
+  @include tablet {
+    background-image: url('/Hero/hero_girl_mobile.webp');
+    padding: 40px 48px;
+    height: 1072px;
+    justify-content: flex-start;
+    margin-top: 48px;
+  }
+
   @include mobile {
     margin-top: 40px;
     background-image: url('/Hero/hero_girl_mobile.webp');
@@ -33,6 +41,11 @@
   width: 100%;
   height: 630px;
   padding: 0 56px;
+
+  @include tablet {
+    padding: 0;
+    height: initial;
+  }
 
   @include mobile {
     padding: 0;

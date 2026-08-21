@@ -12,6 +12,16 @@
   background: #ffffffb2;
   position: relative;
 
+  @include tablet {
+    background: $color-white;
+    border-radius: 0;
+    position: absolute;
+    justify-content: center;
+    left: 0;
+    top: -48px;
+    padding: 12px 24px;
+  }
+
   @include mobile {
     background: $color-white;
     border-radius: 0;
@@ -25,6 +35,13 @@
   .logo {
     width: 112px;
     height: auto;
+
+    @include tablet {
+      width: 33px;
+      height: 27px;
+      position: absolute;
+      align-self: center;
+    }
 
     @include mobile {
       width: 33px;
@@ -49,6 +66,10 @@
       color: $primary-800;
     }
 
+    @include tablet {
+      display: none;
+    }
+
     @include mobile {
       display: none;
     }
@@ -67,6 +88,11 @@
       height: 24px;
     }
 
+    @include tablet {
+      gap: 12px;
+      margin-left: auto;
+    }
+
     @include mobile {
       gap: 12px;
       margin-left: auto;
@@ -81,6 +107,12 @@
 
 .hide-mobile {
   @include mobile {
+    display: none;
+  }
+}
+
+.hide-tablet {
+  @include tablet {
     display: none;
   }
 }

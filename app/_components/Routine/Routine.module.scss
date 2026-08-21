@@ -95,6 +95,11 @@
     gap: 20px;
     width: 100%;
 
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
     @include mobile {
       display: flex;
       overflow-x: auto;

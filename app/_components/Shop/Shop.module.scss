@@ -21,6 +21,10 @@
     width: 100%;
     overflow: hidden;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
     @include mobile {
       flex-direction: column;
     }
@@ -29,6 +33,10 @@
       width: 100%;
       height: auto;
       max-width: 564px;
+
+      @include tablet {
+        max-width: initial;
+      }
     }
 
     .information-container {
@@ -38,6 +46,10 @@
       padding: 0 96px;
       height: stretch;
       background: $color-white;
+
+      @include tablet {
+        padding: 40px 48px;
+      }
 
       @include mobile {
         padding: 25px 30px;
@@ -61,6 +73,12 @@
 
           b {
             font-weight: 500;
+          }
+
+          @include tablet {
+            font-size: 36px;
+            line-height: 36px;
+            letter-spacing: -1.8px;
           }
 
           @include mobile {
